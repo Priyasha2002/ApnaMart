@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:udaan_marketplaceapp/Screens/FeedbackForm.dart';
+import 'package:udaan_marketplaceapp/Screens/save_image_locally.dart';
 
 import 'SupportScreen.dart';
+import 'home_page.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -46,7 +49,9 @@ class ProfileScreen extends StatelessWidget {
                    InkWell(
                 borderRadius: BorderRadius.circular(20),
                 splashColor: Colors.brown,
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder:(context)=> SaveImageLocallyView()));
+                },
                 child: const ListTile(
                   title: Text(
                     'Your account',style: TextStyle(
@@ -103,7 +108,9 @@ class ProfileScreen extends StatelessWidget {
               InkWell(
                 borderRadius: BorderRadius.circular(20),
                 splashColor: Colors.grey,
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder:(context)=> PaymentPage()));
+                },
                 child: const ListTile(
                   title: Text(
                     'Payments',style: TextStyle(
@@ -199,7 +206,9 @@ class ProfileScreen extends StatelessWidget {
               InkWell(
                 borderRadius: BorderRadius.circular(20),
                 splashColor: Colors.grey,
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder:(context)=> FeedbackForm()));
+                },
                 child: const ListTile(
                   title: Text(
                     'Feedback',style: TextStyle(
